@@ -25,6 +25,7 @@
     "access": "public"
   },
   "scripts": {
+    "build": "tsdown",
     "typecheck": "tsc -p tsconfig.json"
   },
   "peerDependencies": {
