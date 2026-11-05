@@ -11,7 +11,7 @@
 
 **Status:** ready-for-agent
 
-**Model:** `opus`
+**Model:** `sonnet`
 
 **Effort:** `high`
 

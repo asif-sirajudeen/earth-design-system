@@ -32,3 +32,5 @@ Used by `/wayfinder`. The **map** is a file with one **child** file per ticket.
 ## Existing layout note
 
 `.scratch/eds-ui/issues/` already groups tickets into phase subfolders (e.g. `00-base-setup/01-repo-init.md`). Keep that grouping for the `eds-ui` effort; use the flat `issues/NN-<slug>.md` form for new efforts.
+
+After changing any `eds-ui` issue (status, checkboxes, model, blockers), run `python3 .scratch/eds-ui/issues/build_map.py` so `.scratch/eds-ui/issues/MAP.md` stays in sync. Never edit `MAP.md` by hand.

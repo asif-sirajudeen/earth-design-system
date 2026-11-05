@@ -9,7 +9,7 @@
 
 **Status:** done
 
-**Model:** `opus`
+**Model:** `sonnet`
 
 **Effort:** `high`
 
