@@ -1,0 +1,9 @@
+{
+  "name": "@eds-ui/docs",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Docs app placeholder. Fumadocs app is added in 12-docs-app-tracer.",
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json"
+  }
+}
