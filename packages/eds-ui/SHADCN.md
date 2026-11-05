@@ -40,3 +40,28 @@ arbitrary value, so the two `::after` boxes in `toast.tsx` do not render (the
 hover bridge between stacked toasts and the close button's enlarged hit area).
 Without a prefix the CLI keeps the quotes. Source is left stock; ticket 36
 (Toast) decides the fix.
+
+## CSS build
+
+`src/styles.css` is the Tailwind entry: theme and utilities imported with
+`prefix(ui)`, no Preflight, `source(none)` plus `@source "./components"`. It
+uses `tw-animate-css/prefix`, not `tw-animate-css`: the default entry reads
+`var(--spacing)`, which does not exist under the prefix (it is `--ui-spacing`).
+The `:root` / `.dark` values live in `src/themes/default.css`, which is copied
+to `dist/themes/` as plain CSS. Re-pulls leave both files unchanged.
+
+`@parcel/watcher` (a `@tailwindcss/cli` dependency) has `allowBuilds: false` in
+`pnpm-workspace.yaml`: it is only used by `--watch` and ships prebuilt binaries.
+
+One rule escapes layers and the prefix: `shadcn/tailwind.css` emits an
+unlayered `@media (prefers-reduced-motion: reduce) { .shimmer {...} }`. It is
+stock and left as is.
+
+## Known prefix defect: `--radius-md` (Tailwind 4.3.4)
+
+Stock `button.tsx` sizes `xs`, `sm`, `icon-xs` and `icon-sm` use
+`rounded-[min(var(--radius-md),Npx)]`. Without a prefix, Tailwind emits
+`--radius-md` because the arbitrary value references it. With `prefix(ui)` it
+would be `--ui-radius-md`, and the reference inside the arbitrary value is not
+rewritten, so `--radius-md` is undefined and those corners render square.
+Not fixed yet.

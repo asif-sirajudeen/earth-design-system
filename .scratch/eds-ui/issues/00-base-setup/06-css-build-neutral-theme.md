@@ -13,8 +13,8 @@
 
 **Effort:** `high`
 
-- [ ] CSS entry imports Tailwind theme and utilities with prefix `ui`, no Preflight, the stock theme mapping and tw-animate-css, and scans only the component source.
-- [ ] Output keeps Tailwind v4's native layers; Tailwind theme variables are `--ui-*`.
-- [ ] Theme file has stock neutral values in oklch for `:root` and `.dark`, with bare shadcn variable names and no `--font-sans`.
-- [ ] Dark mode uses the `.dark` class only.
-- [ ] Theme file is copied to the build output with no Tailwind step; CSS build runs after the JS build.
+- [x] CSS entry imports Tailwind theme and utilities with prefix `ui`, no Preflight, the stock theme mapping and tw-animate-css, and scans only the component source.
+- [x] Output keeps Tailwind v4's native layers; Tailwind theme variables are `--ui-*`.
+- [x] Theme file has stock neutral values in oklch for `:root` and `.dark`, with bare shadcn variable names and no `--font-sans`.
+- [x] Dark mode uses the `.dark` class only.
+- [x] Theme file is copied to the build output with no Tailwind step; CSS build runs after the JS build.

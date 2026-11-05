@@ -9,4 +9,6 @@ export default defineConfig({
   platform: "neutral",
   // Unbundled output keeps each file's "use client"; the bundler warning does not apply.
   checks: { moduleLevelDirective: false },
+  // Theme is plain CSS variables: copied, not compiled.
+  copy: { from: "src/themes/default.css", to: "dist/themes" },
 })
