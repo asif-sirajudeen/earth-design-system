@@ -21,3 +21,4 @@
 - [ ] Stylesheet coverage and prefix check passes on the fresh build.
 - [ ] Toast placement and duration config are verified against Base UI and documented.
 - [ ] Duplicate package copies in one bundle are noted as separate toast managers if confirmed.
+- [ ] Fix the two `ui:after:content-[]` tokens in `toast.tsx` (lines 41, 123). The shadcn 4.23.0 prefix transform drops the quotes from `after:content-['']`, so Tailwind emits no CSS for them. Choose a fix that keeps re-pulls idempotent. See `packages/eds-ui/SHADCN.md`.

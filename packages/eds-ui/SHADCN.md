@@ -20,3 +20,23 @@ consumers. Do not flip it.
 `shadcn add index` output was trimmed: removed `@layer base` (global `border`/`body`
 styles must not leak into consumer apps, and use unprefixed utilities) and the
 `chart-*` / `sidebar-*` tokens (no such components in v1). Do not re-add them.
+
+## Pulling components
+
+Components in `src/components/ui/` are stock CLI output. Do not hand-edit them.
+Re-pull with:
+
+```bash
+pnpm exec shadcn add button input textarea label separator field checkbox radio-group switch select dialog alert-dialog tooltip popover dropdown-menu tabs alert badge avatar spinner toast --overwrite --yes
+```
+
+A re-pull must produce no diff. `src/index.ts` re-exports every component.
+
+## Known prefix-transform defect (shadcn 4.23.0)
+
+With `prefix: "ui"`, the CLI rewrites `after:content-['']` to
+`ui:after:content-[]`, dropping the quotes. Tailwind emits no CSS for an empty
+arbitrary value, so the two `::after` boxes in `toast.tsx` do not render (the
+hover bridge between stacked toasts and the close button's enlarged hit area).
+Without a prefix the CLI keeps the quotes. Source is left stock; ticket 36
+(Toast) decides the fix.
