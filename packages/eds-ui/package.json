@@ -3,6 +3,12 @@
   "version": "0.1.1",
   "description": "Earth Design System UI: shadcn base-nova components on Base UI, compiled by your Tailwind v4.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asif-sirajudeen/earth-design-system.git",
+    "directory": "packages/eds-ui"
+  },
+  "homepage": "https://eds-ui.vercel.app",
   "type": "module",
   "sideEffects": [
     "**/*.css"
