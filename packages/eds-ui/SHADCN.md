@@ -30,7 +30,7 @@ Re-pull with:
 pnpm exec shadcn add button input textarea label separator field checkbox radio-group switch select dialog alert-dialog tooltip popover dropdown-menu tabs alert badge avatar spinner toast --overwrite --yes
 ```
 
-A re-pull must produce no diff. `src/index.ts` re-exports every component.
+One deliberate patch: `button.tsx` base classes use `rounded-[var(--radius-button)]` in place of `rounded-lg` (ticket 14). Re-apply it after a re-pull; `pnpm check:stylesheet` fails if it is missing. Otherwise a re-pull must produce no diff. `src/index.ts` re-exports every component.
 
 ## CSS shipping
 

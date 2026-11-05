@@ -19,6 +19,7 @@ const sentinels = [
   ".focus-visible\\:ring-3",
   ".has-data-\\[icon\\=inline-end\\]\\:pr-2",
   ".rounded-lg",
+  "rounded-\\[var\\(--radius-button\\)\\]",
   ".text-muted-foreground",
 ]
 
@@ -30,6 +31,15 @@ execFileSync(join(root, "node_modules/.bin/tailwindcss"), ["-i", "app.css", "-o"
   stdio: "inherit",
 })
 const css = readFileSync(out, "utf8")
+const theme = readFileSync(join(root, "dist/themes/default.css"), "utf8")
+// Status utilities are only emitted once a component uses them, so check the theme and mapping directly.
+const mapping = readFileSync(join(root, "dist/styles.css"), "utf8")
+for (const v of ["positive", "positive-foreground", "caution", "caution-foreground"]) {
+  if (theme.split(`--${v}:`).length !== 3) problems.push(`theme must define --${v} in light and dark`)
+  if (!mapping.includes(`--color-${v}: var(--${v})`)) problems.push(`styles.css must map --color-${v}`)
+}
+if (!theme.includes("--radius-button: var(--radius)")) problems.push("--radius-button must default to var(--radius)")
+if (/--font-sans|--[\w-]*(hover|pressed)/.test(theme)) problems.push("theme must not set --font-sans or hover/pressed vars")
 for (const s of sentinels) if (!css.includes(s)) problems.push(`missing sentinel selector: ${s}`)
 
 // A `ui:` variant token means a prefixed pull leaked into the unprefixed source.
