@@ -7,13 +7,13 @@
 **Blocked by:** 
 - 10 — PR CI workflow
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `low`
 
-- [ ] `eslint-plugin-jsx-a11y` runs on package source; any rule that fires on unmodified stock source is turned off in config with a comment naming the component, no inline disables.
-- [ ] PR template has the re-pull checklist: diff run before overwrite, diff reviewed including registry dependencies, local edits re-applied, keyboard check, docs page checked, stories checked, contrast rerun if theme changed.
-- [ ] `CODEOWNERS` names the maintainer.
-- [ ] Lint runs in the PR workflow.
+- [x] `eslint-plugin-jsx-a11y` runs on package source; any rule that fires on unmodified stock source is turned off in config with a comment naming the component, no inline disables.
+- [x] PR template has the re-pull checklist: diff run before overwrite, diff reviewed including registry dependencies, local edits re-applied, keyboard check, docs page checked, stories checked, contrast rerun if theme changed.
+- [x] `CODEOWNERS` names the maintainer.
+- [x] Lint runs in the PR workflow.
