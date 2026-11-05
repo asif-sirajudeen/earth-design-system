@@ -1,0 +1,45 @@
+import type { Meta, StoryObj } from "@storybook/react-vite"
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+  Button,
+} from "../src"
+
+type Args = { size?: "default" | "sm" }
+
+function Example({ size }: Args) {
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger render={<Button variant="outline" />}>Delete account</AlertDialogTrigger>
+      <AlertDialogContent size={size}>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>This action cannot be undone.</AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction>Continue</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  )
+}
+
+const meta = {
+  title: "Components/AlertDialog",
+  component: Example,
+  argTypes: { size: { control: "select", options: ["default", "sm"] } },
+} satisfies Meta<typeof Example>
+
+export default meta
+type Story = StoryObj<typeof meta>
+
+export const Default: Story = {}
+export const Sm: Story = { args: { size: "sm" } }

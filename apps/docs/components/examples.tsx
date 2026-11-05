@@ -1,12 +1,42 @@
 import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
   Button,
   Checkbox,
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
   Field,
   FieldContent,
   FieldDescription,
   FieldLabel,
   Input,
   Label,
+  Popover,
+  PopoverContent,
+  PopoverDescription,
+  PopoverHeader,
+  PopoverTitle,
+  PopoverTrigger,
   RadioGroup,
   RadioGroupItem,
   Select,
@@ -20,6 +50,9 @@ import {
   Spinner,
   Switch,
   Textarea,
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
 } from "@asif-sirajudeen/eds-ui"
 import type { ReactNode } from "react"
 
@@ -144,5 +177,80 @@ export const SelectExample = () => (
         </SelectGroup>
       </SelectContent>
     </Select>
+  </Box>
+)
+
+export const DialogExample = () => (
+  <Box>
+    <Dialog>
+      <DialogTrigger render={<Button variant="outline" />}>Open dialog</DialogTrigger>
+      <DialogContent>
+        <DialogHeader>
+          <DialogTitle>Edit profile</DialogTitle>
+          <DialogDescription>Make changes to your profile here.</DialogDescription>
+        </DialogHeader>
+        <DialogFooter>
+          <DialogClose render={<Button />}>Save</DialogClose>
+        </DialogFooter>
+      </DialogContent>
+    </Dialog>
+  </Box>
+)
+
+export const AlertDialogExample = () => (
+  <Box>
+    <AlertDialog>
+      <AlertDialogTrigger render={<Button variant="outline" />}>Delete account</AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>This action cannot be undone.</AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction>Continue</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  </Box>
+)
+
+export const TooltipExample = () => (
+  <Box>
+    <Tooltip>
+      <TooltipTrigger render={<Button variant="outline" />}>Hover me</TooltipTrigger>
+      <TooltipContent>Add to library</TooltipContent>
+    </Tooltip>
+  </Box>
+)
+
+export const PopoverExample = () => (
+  <Box>
+    <Popover>
+      <PopoverTrigger render={<Button variant="outline" />}>Open popover</PopoverTrigger>
+      <PopoverContent>
+        <PopoverHeader>
+          <PopoverTitle>Dimensions</PopoverTitle>
+          <PopoverDescription>Set the dimensions for the layer.</PopoverDescription>
+        </PopoverHeader>
+      </PopoverContent>
+    </Popover>
+  </Box>
+)
+
+export const DropdownMenuExample = () => (
+  <Box>
+    <DropdownMenu>
+      <DropdownMenuTrigger render={<Button variant="outline" />}>Open menu</DropdownMenuTrigger>
+      <DropdownMenuContent className="w-48">
+        <DropdownMenuGroup>
+          <DropdownMenuLabel>My account</DropdownMenuLabel>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+        </DropdownMenuGroup>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem variant="destructive">Log out</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   </Box>
 )

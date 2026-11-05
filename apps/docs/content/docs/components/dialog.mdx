@@ -1,0 +1,24 @@
+---
+title: Dialog
+description: A modal window over the page.
+---
+
+```tsx
+import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from "@asif-sirajudeen/eds-ui"
+```
+
+<DialogExample />
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## Recipes
+
+Triggers take a `render` prop to use a styled element: `<DialogTrigger render={<Button />}>`. The popup renders in a portal under `<body>`, so it follows `.dark` on `<html>`.
+
+## Reference
+
+- <StorybookLink story="components-dialog">Open in Storybook</StorybookLink>
+- [shadcn/ui Dialog](https://ui.shadcn.com/docs/components/base/dialog)
+- [Base UI Dialog](https://base-ui.com/react/components/dialog)

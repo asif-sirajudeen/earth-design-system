@@ -1,0 +1,24 @@
+---
+title: Tooltip
+description: A short hint shown on hover or focus.
+---
+
+```tsx
+import { Tooltip, TooltipTrigger, TooltipContent } from "@asif-sirajudeen/eds-ui"
+```
+
+<TooltipExample />
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## TooltipProvider
+
+Not required. Base UI Tooltip opens without a provider, and the stories and smoke test mount none. Mount `TooltipProvider` only to share a `delay` across tooltips; its default is `0`.
+
+## Reference
+
+- <StorybookLink story="components-tooltip">Open in Storybook</StorybookLink>
+- [shadcn/ui Tooltip](https://ui.shadcn.com/docs/components/base/tooltip)
+- [Base UI Tooltip](https://base-ui.com/react/components/tooltip)
