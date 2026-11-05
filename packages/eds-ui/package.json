@@ -1,12 +1,55 @@
 {
   "name": "@asif-sirajudeen/eds-ui",
   "version": "0.0.0",
-  "private": true,
-  "description": "Placeholder workspace. Manifest is set up in 02-package-skeleton.",
+  "description": "Earth Design System UI: shadcn base-nova components on Base UI, prebuilt CSS.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "files": [
     "dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./styles.css": "./dist/styles.css",
+    "./themes/default.css": "./dist/themes/default.css"
+  },
+  "bin": {
+    "eds-ui": "./dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "typecheck": "tsc -p tsconfig.json"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "dependencies": {
+    "@base-ui/react": "^1.9.0",
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.5.2",
+    "lucide-react": "^1.69.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "jsdom": "^30.1.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "shadcn": "^4.23.0",
+    "tailwindcss": "^4.3.4",
+    "tsdown": "^0.23.5",
+    "tw-animate-css": "^1.4.0",
+    "vitest": "^5.1.0"
   }
 }
