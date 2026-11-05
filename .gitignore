@@ -25,3 +25,4 @@ coverage/
 
 # next
 next-env.d.ts
+packages/eds-ui/fixtures/.override.css

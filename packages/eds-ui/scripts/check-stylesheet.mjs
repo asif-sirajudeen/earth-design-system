@@ -1,9 +1,9 @@
 // Run after `pnpm build`. Compiles fixtures/app.css (the three app setup lines) against dist/
 // with the Tailwind CLI, then fails if a sentinel selector is missing or a `ui:` token is left in src/components.
 import { execFileSync } from "node:child_process"
-import { readdirSync, readFileSync, mkdtempSync } from "node:fs"
+import { readdirSync, readFileSync, mkdtempSync, rmSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
-import { join } from "node:path"
+import { dirname, join } from "node:path"
 
 const root = new URL("..", import.meta.url).pathname
 const problems = []
@@ -31,6 +31,21 @@ execFileSync(join(root, "node_modules/.bin/tailwindcss"), ["-i", "app.css", "-o"
   stdio: "inherit",
 })
 const css = readFileSync(out, "utf8")
+
+// App overrides placed after the theme import must land after the defaults and reach Button's radius rule.
+const overrideSrc = join(root, "fixtures/.override.css")
+writeFileSync(overrideSrc, `${readFileSync(join(root, "fixtures/app.css"), "utf8")}\n:root { --primary: oklch(0.6 0.2 30); --radius-button: 2px; }\n`)
+const overrideOut = join(dirname(out), "override.css")
+try {
+  execFileSync(join(root, "node_modules/.bin/tailwindcss"), ["-i", ".override.css", "-o", overrideOut], { cwd: join(root, "fixtures"), stdio: "inherit" })
+} finally {
+  rmSync(overrideSrc, { force: true })
+}
+const oc = readFileSync(overrideOut, "utf8")
+if (!/--radius-button: 2px/.test(oc) || oc.lastIndexOf("--radius-button: 2px") < oc.indexOf("--radius-button: var(--radius)"))
+  problems.push("--radius-button override does not land after the theme default")
+if (!/--primary: oklch\(0\.6 0\.2 30\)/.test(oc)) problems.push("--primary override missing from compiled CSS")
+if (!/border-radius: var\(--radius-button\)/.test(oc)) problems.push("Button rule does not read --radius-button")
 const theme = readFileSync(join(root, "dist/themes/default.css"), "utf8")
 // Status utilities are only emitted once a component uses them, so check the theme and mapping directly.
 const mapping = readFileSync(join(root, "dist/styles.css"), "utf8")

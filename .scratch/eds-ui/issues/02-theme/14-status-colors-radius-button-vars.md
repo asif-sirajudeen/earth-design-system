@@ -16,4 +16,4 @@
 - [x] Four status variables added in oklch, green and amber hues, light and dark, mapped into the theme in the stock add-new-colors way.
 - [x] `--radius-button` defaults to `var(--radius)` and Button uses it.
 - [x] Theme does not set `--font-sans` and has no hover or pressed variables.
-- [ ] Overriding (not verified in a test app; only default-size Button uses the var, xs/sm/icon-xs/icon-sm keep stock radii) `--primary` and `--radius-button` after the theme import visibly changes a Button in a test app.
+- [x] Overriding `--primary` and `--radius-button` after the theme import changes a Button: verified by compiling the fixture with overrides in `check:stylesheet` (CSS-level; default-size Button only, xs/sm/icon sizes keep stock radii).
