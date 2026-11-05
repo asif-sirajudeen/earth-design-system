@@ -53,6 +53,11 @@ if (command === "list" || command === "search") {
 } else if (command === "view") {
   if (!arg || !/^[a-z0-9-]+$/.test(arg)) fail("Usage: eds-ui view <component>")
   const [item] = viewItems(`${base}/r/${arg}.json`)
+  // setup is guidance only: it has no source twin.
+  if (arg === "setup") {
+    process.stdout.write(`${item.description ?? item.name}\n`)
+    process.exit(0)
+  }
   const [source] = viewItems(`${base}/r/src/${version}/${arg}.json`)
   const files = (source.files ?? []).map((f) => `// ${f.path}\n${f.content}`)
   process.stdout.write(`${item.description ?? item.name}\n\n${files.join("\n")}`)

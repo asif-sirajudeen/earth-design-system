@@ -21,6 +21,7 @@ const routes: Record<string, unknown> = {
       { name: "gadget", type: "registry:ui", description: "A gadget." },
     ],
   },
+  "/r/setup.json": { name: "setup", type: "registry:ui", description: "Setup steps." },
   "/r/widget.json": { name: "widget", type: "registry:ui", description },
   [`/r/src/${version}/widget.json`]: {
     name: "widget",
@@ -56,6 +57,11 @@ describe("eds-ui CLI", () => {
     const { stdout } = await eds("view", "widget")
     expect(stdout.startsWith(description)).toBe(true)
     expect(stdout.indexOf(source)).toBeGreaterThan(description.length)
+  })
+
+  it("view setup prints the description only: it has no source twin", async () => {
+    const { stdout } = await eds("view", "setup")
+    expect(stdout.trim()).toBe("Setup steps.")
   })
 
   it("list passes through to shadcn", async () => {
