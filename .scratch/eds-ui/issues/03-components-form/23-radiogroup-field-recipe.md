@@ -7,7 +7,7 @@
 **Blocked by:** 
 - 21 — Field
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 

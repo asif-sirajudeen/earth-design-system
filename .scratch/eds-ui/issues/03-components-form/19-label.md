@@ -8,7 +8,7 @@
 - 11 — jsx-a11y lint, PR template and CODEOWNERS
 - 12 — Docs app tracer: Fumadocs and Button page
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 

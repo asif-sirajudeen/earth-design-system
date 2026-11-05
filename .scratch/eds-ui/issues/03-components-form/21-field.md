@@ -8,7 +8,7 @@
 - 19 — Label
 - 20 — Separator
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
