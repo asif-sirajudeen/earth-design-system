@@ -8,7 +8,7 @@
     "css": "src/styles.css",
     "baseColor": "neutral",
     "cssVariables": true,
-    "prefix": "ui"
+    "prefix": ""
   },
   "iconLibrary": "lucide",
   "aliases": {

@@ -9,6 +9,10 @@ export default defineConfig({
   platform: "neutral",
   // Unbundled output keeps each file's "use client"; the bundler warning does not apply.
   checks: { moduleLevelDirective: false },
-  // Theme is plain CSS variables: copied, not compiled.
-  copy: { from: "src/themes/default.css", to: "dist/themes" },
+  // CSS is shipped uncompiled: the app's Tailwind processes styles.css via its @source.
+  copy: [
+    { from: "src/styles.css", to: "dist" },
+    { from: "src/shadcn.css", to: "dist" },
+    { from: "src/themes/default.css", to: "dist/themes" },
+  ],
 })
