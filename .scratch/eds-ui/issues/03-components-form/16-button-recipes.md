@@ -14,6 +14,6 @@
 
 **Effort:** `low`
 
-- [ ] Button docs page shows the loading recipe and the icon-only `aria-label` rule, and says consumer axe tests catch misses.
-- [ ] A Storybook story per recipe exists on Button.
-- [ ] Docs link the loading recipe to Spinner once available; no Button source edit.
+- [x] Button docs page shows the loading recipe and the icon-only `aria-label` rule, and says consumer axe tests catch misses.
+- [x] A Storybook story per recipe exists on Button.
+- [ ] Docs link the loading recipe to Spinner once available (Spinner has no docs page yet; link when it does); no Button source edit.

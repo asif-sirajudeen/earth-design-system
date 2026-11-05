@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite"
-import { Button } from "../src"
+import { PlusIcon } from "lucide-react"
+import { Button, Spinner } from "../src"
 
 const meta = {
   title: "Components/Button",
@@ -35,3 +36,18 @@ export const Icon: Story = { args: { size: "icon", children: "+", "aria-label": 
 export const IconXs: Story = { args: { size: "icon-xs", children: "+", "aria-label": "Add" } }
 export const IconSm: Story = { args: { size: "icon-sm", children: "+", "aria-label": "Add" } }
 export const IconLg: Story = { args: { size: "icon-lg", children: "+", "aria-label": "Add" } }
+
+// Recipe: loading is disabled plus a Spinner with data-icon. No loading prop.
+export const Loading: Story = {
+  render: (args) => (
+    <Button {...args} disabled>
+      <Spinner data-icon="inline-start" />
+      Saving
+    </Button>
+  ),
+}
+
+// Recipe: an icon-only Button needs an aria-label.
+export const IconOnly: Story = {
+  args: { size: "icon", variant: "outline", "aria-label": "Add item", children: <PlusIcon /> },
+}

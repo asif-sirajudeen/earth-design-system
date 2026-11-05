@@ -1,0 +1,24 @@
+---
+title: RadioGroup
+description: Pick one option from a set.
+---
+
+```tsx
+import { RadioGroup, RadioGroupItem } from "@asif-sirajudeen/eds-ui"
+```
+
+<RadioGroupExample />
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## Recipes
+
+RadioGroup has no label or description props. Wrap each `RadioGroupItem` in a `Field` with `FieldLabel` and `FieldDescription`, as in the example above. Name the group with `aria-label` or a `FieldSet` and `FieldLegend`.
+
+## Reference
+
+- <StorybookLink story="components-radio-group">Open in Storybook</StorybookLink>
+- [shadcn/ui RadioGroup](https://ui.shadcn.com/docs/components/base/radio-group)
+- [Base UI RadioGroup](https://base-ui.com/react/components/radio-group)

@@ -1,0 +1,24 @@
+---
+title: Select
+description: Pick one option from a popup list.
+---
+
+```tsx
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@asif-sirajudeen/eds-ui"
+```
+
+<SelectExample />
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## Recipes
+
+Select has no `options` prop. Compose the list from parts: `SelectTrigger`, `SelectValue`, `SelectContent`, `SelectGroup`, `SelectLabel`, `SelectItem` and `SelectSeparator`, as in the example above. Without a visible label, set `aria-label` on `SelectTrigger`.
+
+## Reference
+
+- <StorybookLink story="components-select">Open in Storybook</StorybookLink>
+- [shadcn/ui Select](https://ui.shadcn.com/docs/components/base/select)
+- [Base UI Select](https://base-ui.com/react/components/select)

@@ -15,7 +15,34 @@ None yet. The component matches upstream shadcn base-nova.
 
 ## Recipes
 
-None yet.
+Button has no `loading` prop and no icon-only variant. Both are recipes, with no change to Button source.
+
+### Loading
+
+Set `disabled` and add a `Spinner` with `data-icon`.
+
+<ButtonLoadingExample />
+
+```tsx
+<Button disabled>
+  <Spinner data-icon="inline-start" />
+  Saving
+</Button>
+```
+
+Spinner has no docs page yet. Link it here once it has one.
+
+### Icon-only
+
+An icon-only Button must have an `aria-label`. Nothing in Button enforces this. Your own axe tests catch a miss.
+
+<ButtonIconOnlyExample />
+
+```tsx
+<Button size="icon" variant="outline" aria-label="Add item">
+  <PlusIcon />
+</Button>
+```
 
 ## Reference
 
