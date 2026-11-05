@@ -15,9 +15,13 @@
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "registry:build": "pnpm --filter @asif-sirajudeen/eds-ui registry:build",
-    "registry:snapshot": "pnpm --filter @asif-sirajudeen/eds-ui registry:snapshot"
+    "registry:snapshot": "pnpm --filter @asif-sirajudeen/eds-ui registry:snapshot",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm registry:snapshot",
+    "release": "pnpm --filter @asif-sirajudeen/eds-ui build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^3.0.3",
     "typescript": "^6.0.3"
   }
 }
