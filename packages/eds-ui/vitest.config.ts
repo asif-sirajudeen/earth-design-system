@@ -17,7 +17,11 @@ export default defineConfig({
         },
       },
       // The eds-ui bin as a subprocess: no DOM, no component setup.
-      { extends: true, test: { name: "cli", environment: "node", include: ["tests/**/*.test.ts"] } },
+      {
+        extends: true,
+        // Each test spawns shadcn; that is slow while the other project runs in parallel.
+        test: { name: "cli", environment: "node", include: ["tests/**/*.test.ts"], testTimeout: 30_000 },
+      },
     ],
   },
 })
