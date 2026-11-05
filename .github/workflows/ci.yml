@@ -23,5 +23,6 @@ jobs:
       - run: pnpm lint
       - run: pnpm build
       - run: pnpm --filter @asif-sirajudeen/eds-ui build-storybook
+      - run: pnpm --filter @asif-sirajudeen/eds-ui registry:validate
       - run: pnpm --filter @asif-sirajudeen/eds-ui test
       - run: pnpm --filter @asif-sirajudeen/eds-ui check:stylesheet

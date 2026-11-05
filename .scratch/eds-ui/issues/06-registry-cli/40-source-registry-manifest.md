@@ -7,12 +7,12 @@
 **Blocked by:** 
 - 37 — @eds-ui registry manifest: 21 npm-pointer items
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `high`
 
-- [ ] `shadcn build` of this manifest outputs to a custom directory next to the main registry build; this is verified.
-- [ ] No consumer config names this registry.
-- [ ] Items are served under a versioned path.
+- [x] `shadcn build` of this manifest outputs to a custom directory next to the main registry build; this is verified.
+- [x] No consumer config names this registry.
+- [x] Items are served under a versioned path.

@@ -7,12 +7,12 @@
 **Blocked by:** 
 - 37 — @eds-ui registry manifest: 21 npm-pointer items
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `low`
 
-- [ ] `setup` item content gives the import order exactly: theme, package styles, `tailwindcss`.
-- [ ] It carries one line on the `eds-ui` CLI.
-- [ ] It builds with the rest of the registry.
+- [x] `setup` item content gives the import order exactly: theme, package styles, `tailwindcss`.
+- [x] It carries one line on the `eds-ui` CLI.
+- [x] It builds with the rest of the registry.

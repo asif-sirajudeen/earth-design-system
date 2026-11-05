@@ -1,5 +1,5 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": { "noEmit": true, "paths": { "@/*": ["./src/*"] } },
-  "include": ["src", "stories", ".storybook", "css.d.ts", "vitest.config.ts", "vitest.setup.ts"]
+  "include": ["src", "stories", "tests", ".storybook", "css.d.ts", "vitest.config.ts", "vitest.setup.ts"]
 }

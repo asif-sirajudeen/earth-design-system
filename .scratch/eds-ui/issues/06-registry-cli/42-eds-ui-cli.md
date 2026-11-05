@@ -8,13 +8,13 @@
 - 38 — setup registry item with CSS import order
 - 41 — registry:snapshot script
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `opus`
 
 **Effort:** `high`
 
-- [ ] Bin `eds-ui` is a thin wrapper over a pinned shadcn CLI version.
-- [ ] `list` and `search` wrap the registry commands; this is verified to work when the app has not registered `@eds-ui`.
-- [ ] `view <x>` prints the item description (import line first), then the source for its own package version; `shadcn view` with a full item URL is verified.
-- [ ] No add command; the CLI writes no files.
+- [x] Bin `eds-ui` is a thin wrapper over a pinned shadcn CLI version.
+- [x] `list` and `search` wrap the registry commands; this is verified to work when the app has not registered `@eds-ui`.
+- [x] `view <x>` prints the item description (import line first), then the source for its own package version; `shadcn view` with a full item URL is verified.
+- [x] No add command; the CLI writes no files.

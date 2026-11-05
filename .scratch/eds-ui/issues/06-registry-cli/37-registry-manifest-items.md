@@ -27,13 +27,13 @@
 - 35 — Spinner
 - 36 — Toast: Toaster and toast.add()
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `medium`
 
-- [ ] 21 items with `dependencies` set to the package, a 4-line description and a `docs` field; no files, css, cssVars or registryDependencies; no theme item.
-- [ ] Description line 1 is the root import naming every part (fits CLI search cut at about 80 characters), line 2 says npm package and how to read source, line 3 states the stock delta, line 4 the docs URL.
-- [ ] Item JSON builds with `shadcn build`.
-- [ ] Registry is public with no auth.
+- [x] 21 items with `dependencies` set to the package, a 4-line description and a `docs` field; no files, css, cssVars or registryDependencies; no theme item.
+- [x] Description line 1 is the root import naming every part (fits CLI search cut at about 80 characters), line 2 says npm package and how to read source, line 3 states the stock delta, line 4 the docs URL.
+- [x] Item JSON builds with `shadcn build`.
+- [x] Registry is public with no auth.

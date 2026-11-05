@@ -7,11 +7,11 @@
 **Blocked by:** 
 - 37 — @eds-ui registry manifest: 21 npm-pointer items
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `low`
 
-- [ ] `registry validate` is added to the PR workflow.
-- [ ] A deliberately malformed item is shown to fail it.
+- [x] `registry validate` is added to the PR workflow.
+- [x] A deliberately malformed item is shown to fail it.

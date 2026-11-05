@@ -1,0 +1,227 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "eds-ui",
+  "homepage": "https://eds-ui.vercel.app",
+  "items": [
+    {
+      "name": "setup",
+      "type": "registry:ui",
+      "title": "Setup",
+      "description": "npm i @asif-sirajudeen/eds-ui (peer tailwindcss ^4.3). Add to app CSS in this order: tailwindcss, then themes/default.css, then styles.css:\n@import \"tailwindcss\";\n@import \"@asif-sirajudeen/eds-ui/themes/default.css\";\n@import \"@asif-sirajudeen/eds-ui/styles.css\";\nRead component source with the CLI: npx eds-ui list|search|view <x>. Do not shadcn add from @eds-ui.",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/setup"
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "AlertDialog",
+      "description": "import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view alert-dialog. Needs @eds-ui/setup once.\nStock shadcn base-nova AlertDialog on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/alert-dialog. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/alert-dialog",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/alert-dialog"
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "import { Alert, AlertTitle, AlertDescription } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view alert. Needs @eds-ui/setup once.\nStock shadcn base-nova Alert on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/alert. Use render prop, not asChild. Adds positive and caution variants.\nDocs: https://eds-ui.vercel.app/docs/components/alert",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/alert"
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "import { Avatar, AvatarImage, AvatarFallback, AvatarBadge } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view avatar. Needs @eds-ui/setup once.\nStock shadcn base-nova Avatar on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/avatar. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/avatar",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/avatar"
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "import { Badge } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view badge. Needs @eds-ui/setup once.\nStock shadcn base-nova Badge on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/badge. Use render prop, not asChild. Adds positive and caution variants.\nDocs: https://eds-ui.vercel.app/docs/components/badge",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/badge"
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "import { Button } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view button. Needs @eds-ui/setup once.\nStock shadcn base-nova Button on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/button. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/button",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/button"
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "import { Checkbox } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view checkbox. Needs @eds-ui/setup once.\nStock shadcn base-nova Checkbox on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/checkbox. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/checkbox",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/checkbox"
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view dialog. Needs @eds-ui/setup once.\nStock shadcn base-nova Dialog on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/dialog. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/dialog",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/dialog"
+    },
+    {
+      "name": "dropdown-menu",
+      "type": "registry:ui",
+      "title": "DropdownMenu",
+      "description": "import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuLabel, DropdownMenuItem, DropdownMenuSeparator } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view dropdown-menu. Needs @eds-ui/setup once.\nStock shadcn base-nova DropdownMenu on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/dropdown-menu. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/dropdown-menu",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/dropdown-menu"
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "import { Field, FieldLabel, FieldDescription } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view field. Needs @eds-ui/setup once.\nStock shadcn base-nova Field on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/field. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/field",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/field"
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "import { Input } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view input. Needs @eds-ui/setup once.\nStock shadcn base-nova Input on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/input. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/input",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/input"
+    },
+    {
+      "name": "label",
+      "type": "registry:ui",
+      "title": "Label",
+      "description": "import { Label } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view label. Needs @eds-ui/setup once.\nStock shadcn base-nova Label on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/label. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/label",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/label"
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "import { Popover, PopoverTrigger, PopoverContent, PopoverHeader, PopoverTitle, PopoverDescription } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view popover. Needs @eds-ui/setup once.\nStock shadcn base-nova Popover on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/popover. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/popover",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/popover"
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "RadioGroup",
+      "description": "import { RadioGroup, RadioGroupItem } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view radio-group. Needs @eds-ui/setup once.\nStock shadcn base-nova RadioGroup on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/radio-group. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/radio-group",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/radio-group"
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view select. Needs @eds-ui/setup once.\nStock shadcn base-nova Select on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/select. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/select",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/select"
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "import { Separator } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view separator. Needs @eds-ui/setup once.\nStock shadcn base-nova Separator on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/separator. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/separator",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/separator"
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "import { Spinner } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view spinner. Needs @eds-ui/setup once.\nStock shadcn base-nova Spinner on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/spinner. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/spinner",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/spinner"
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "import { Switch } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view switch. Needs @eds-ui/setup once.\nStock shadcn base-nova Switch on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/switch. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/switch",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/switch"
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "import { Tabs, TabsList, TabsTrigger, TabsContent } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view tabs. Needs @eds-ui/setup once.\nStock shadcn base-nova Tabs on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/tabs. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/tabs",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/tabs"
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "import { Textarea } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view textarea. Needs @eds-ui/setup once.\nStock shadcn base-nova Textarea on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/textarea. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/textarea",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/textarea"
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "import { Toaster, toast } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view toast. Needs @eds-ui/setup once.\nStock shadcn base-nova Toast on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/toast. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/toast",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/toast"
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "import { Tooltip, TooltipTrigger, TooltipContent } from \"@asif-sirajudeen/eds-ui\"\nnpm package, do not copy source. Read it: npx eds-ui view tooltip. Needs @eds-ui/setup once.\nStock shadcn base-nova Tooltip on Base UI: same parts and props as https://ui.shadcn.com/docs/components/base/tooltip. Use render prop, not asChild.\nDocs: https://eds-ui.vercel.app/docs/components/tooltip",
+      "dependencies": [
+        "@asif-sirajudeen/eds-ui"
+      ],
+      "docs": "https://eds-ui.vercel.app/docs/components/tooltip"
+    }
+  ]
+}

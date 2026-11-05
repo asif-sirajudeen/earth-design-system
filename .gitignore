@@ -26,3 +26,6 @@ coverage/
 # next
 next-env.d.ts
 packages/eds-ui/fixtures/.override.css
+
+# registry build output; source snapshots under r/src/ are committed
+apps/docs/public/r/*.json

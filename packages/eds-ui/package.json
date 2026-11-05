@@ -8,6 +8,7 @@
     "**/*.css"
   ],
   "files": [
+    "bin",
     "dist"
   ],
   "exports": {
@@ -19,7 +20,7 @@
     "./themes/default.css": "./dist/themes/default.css"
   },
   "bin": {
-    "eds-ui": "./dist/cli.js"
+    "eds-ui": "./bin/eds-ui.mjs"
   },
   "publishConfig": {
     "access": "public"
@@ -32,7 +33,10 @@
     "test": "vitest run",
     "check:stylesheet": "node scripts/check-stylesheet.mjs",
     "check:contrast": "node scripts/check-contrast.mjs",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "registry:build": "shadcn build registry.json -o ../../apps/docs/public/r",
+    "registry:validate": "shadcn registry validate registry.json",
+    "registry:snapshot": "node scripts/registry-snapshot.mjs"
   },
   "peerDependencies": {
     "react": "^19.0.0",

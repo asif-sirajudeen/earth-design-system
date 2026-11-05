@@ -13,7 +13,9 @@
     "build": "pnpm -r build",
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
-    "lint": "pnpm -r lint"
+    "lint": "pnpm -r lint",
+    "registry:build": "pnpm --filter @asif-sirajudeen/eds-ui registry:build",
+    "registry:snapshot": "pnpm --filter @asif-sirajudeen/eds-ui registry:snapshot"
   },
   "devDependencies": {
     "typescript": "^6.0.3"

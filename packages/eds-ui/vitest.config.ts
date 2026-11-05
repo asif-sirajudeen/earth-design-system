@@ -6,8 +6,18 @@ export default defineConfig({
   plugins: [react()],
   resolve: { alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) } },
   test: {
-    environment: "jsdom",
-    setupFiles: ["./vitest.setup.ts"],
-    include: ["stories/**/*.test.tsx"],
+    projects: [
+      {
+        extends: true,
+        test: {
+          name: "components",
+          environment: "jsdom",
+          setupFiles: ["./vitest.setup.ts"],
+          include: ["stories/**/*.test.tsx"],
+        },
+      },
+      // The eds-ui bin as a subprocess: no DOM, no component setup.
+      { extends: true, test: { name: "cli", environment: "node", include: ["tests/**/*.test.ts"] } },
+    ],
   },
 })

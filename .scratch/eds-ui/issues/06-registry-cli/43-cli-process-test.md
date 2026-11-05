@@ -7,13 +7,13 @@
 **Blocked by:** 
 - 42 — eds-ui CLI: list, search, view
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `high`
 
-- [ ] The bin can be pointed at a local fixture registry, and the pinned shadcn version is available to the subprocess in CI.
-- [ ] Test asserts `view` prints description then source.
-- [ ] Test checks list and search pass through.
-- [ ] Test runs in the PR workflow.
+- [x] The bin can be pointed at a local fixture registry, and the pinned shadcn version is available to the subprocess in CI.
+- [x] Test asserts `view` prints description then source.
+- [x] Test checks list and search pass through.
+- [x] Test runs in the PR workflow.
