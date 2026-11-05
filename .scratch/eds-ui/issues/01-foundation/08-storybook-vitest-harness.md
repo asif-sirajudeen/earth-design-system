@@ -7,14 +7,14 @@
 **Blocked by:** 
 - 07 — Package tracer: Button builds and imports from the tarball
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `high`
 
-- [ ] Storybook (React Vite) has core, docs and themes addons only, a dark-mode toolbar toggle that sets `.dark` on `<html>`, and autodocs.
-- [ ] Stories live outside the shipped source and use inline style for layout wrappers.
-- [ ] Button has a Default story with Controls and one story per variant and size.
-- [ ] Vitest with Testing Library in jsdom renders the stories via composed stories and project annotations.
-- [ ] Button smoke test passes with no console errors and no axe violations.
+- [x] Storybook (React Vite) has core, docs and themes addons only, a dark-mode toolbar toggle that sets `.dark` on `<html>`, and autodocs.
+- [x] Stories live outside the shipped source and use inline style for layout wrappers.
+- [x] Button has a Default story with Controls and one story per variant and size.
+- [x] Vitest with Testing Library in jsdom renders the stories via composed stories and project annotations.
+- [x] Button smoke test passes with no console errors and no axe violations.
