@@ -29,3 +29,6 @@ packages/eds-ui/fixtures/.override.css
 
 # registry build output; source snapshots under r/src/ are committed
 apps/docs/public/r/*.json
+
+# storybook copied in at deploy time
+apps/docs/public/storybook/

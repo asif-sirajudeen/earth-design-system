@@ -1,0 +1,112 @@
+---
+title: Setup
+description: Install eds-ui, wire the CSS, and point your agent at the CLI.
+---
+
+## Install
+
+```bash
+npm install @asif-sirajudeen/eds-ui
+```
+
+Peers: `react` and `react-dom` `^19`, and `tailwindcss` `^4.3.0`. The package is on public npm, so your app needs no registry or auth change.
+
+## CSS
+
+Add three lines to your global CSS, in this order:
+
+```css
+@import "tailwindcss";
+@import "@asif-sirajudeen/eds-ui/themes/default.css";
+@import "@asif-sirajudeen/eds-ui/styles.css";
+```
+
+`styles.css` carries its own `@source` line, so your app needs none. Tailwind compiles the package classes in the same pass as your own.
+
+### Brand look
+
+The theme is a set of bare variables. Override them after the theme import:
+
+```css
+@import "@asif-sirajudeen/eds-ui/themes/default.css";
+
+:root {
+  --primary: oklch(0.55 0.2 260);
+  --primary-foreground: oklch(0.985 0 0);
+}
+```
+
+### How your app and the package interact
+
+- Your `className` wins. Package components merge it through `cn()`, so `<Button className="px-8" />` replaces the default padding.
+- Your Tailwind tokens restyle package components. `--spacing`, `--text-*`, `--font-*` and `--radius-*` apply to them as they do to any shadcn app.
+- The package sets your radius scale. Its `--radius-*` mapping derives from `--radius`, so your own `rounded-md` follows the package theme.
+
+## Dark mode
+
+Put the `dark` class on `<html>`, not on a wrapper. Base UI portals (Dialog, Popover, Select, Tooltip) render into `body`, outside any wrapper.
+
+```html
+<html class="dark">
+```
+
+## Toaster
+
+Mount one `<Toaster />` at the app root. Call `toast.add()` from anywhere. See [Toast](/docs/components/toast).
+
+```tsx
+import { Toaster } from "@asif-sirajudeen/eds-ui"
+
+export function App({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      {children}
+      <Toaster />
+    </>
+  )
+}
+```
+
+## TooltipProvider
+
+Not required. Tooltips open with no provider. Mount `TooltipProvider` only to share a `delay` across tooltips; its default is `0`. See [Tooltip](/docs/components/tooltip).
+
+## Registry
+
+Add the `@eds-ui` registry to `components.json` so your agent and the shadcn MCP server can find the components:
+
+```json
+{
+  "registries": {
+    "@eds-ui": "https://eds-ui.vercel.app/r/{name}.json"
+  }
+}
+```
+
+The registry is for discovery only. Its items point at the npm package; they install no source.
+
+## CLI
+
+Read the component source that matches your installed version:
+
+```bash
+npx eds-ui list
+npx eds-ui search dialog
+npx eds-ui view button
+```
+
+## Agents
+
+Add this to your `AGENTS.md`:
+
+```md
+## eds-ui
+
+Components come from the `@asif-sirajudeen/eds-ui` npm package. Never copy their source.
+
+- Find components: `npx eds-ui list` or `npx eds-ui search <query>`.
+- Read a component's source and usage: `npx eds-ui view <component>`.
+- Never run `shadcn add` from `@eds-ui`. It installs only the package.
+```
+
+This page is also served as markdown at `/docs/setup.md`. The whole site is at `/llms.txt` and `/llms-full.txt`.

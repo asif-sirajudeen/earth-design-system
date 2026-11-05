@@ -7,11 +7,11 @@
 **Blocked by:** 
 - 47 — Setup docs page
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `haiku`
 
 **Effort:** `low`
 
-- [ ] Snippet says use `npx eds-ui list|search|view` and never `shadcn add` from `@eds-ui`.
-- [ ] Snippet is copyable on the setup page.
+- [x] Snippet says use `npx eds-ui list|search|view` and never `shadcn add` from `@eds-ui`.
+- [x] Snippet is copyable on the setup page.

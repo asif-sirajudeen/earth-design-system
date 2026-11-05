@@ -14,6 +14,7 @@
     "typecheck": "pnpm -r typecheck",
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
+    "build:site": "node scripts/site-build.mjs",
     "registry:build": "pnpm --filter @asif-sirajudeen/eds-ui registry:build",
     "registry:snapshot": "pnpm --filter @asif-sirajudeen/eds-ui registry:snapshot",
     "changeset": "changeset",
