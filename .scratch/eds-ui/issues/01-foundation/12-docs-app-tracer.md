@@ -8,13 +8,17 @@
 - 07 — Package tracer: Button builds and imports from the tarball
 - 08 — Storybook and Vitest harness with Button smoke and axe test
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `high`
 
-- [ ] Docs app is private and ignored by changesets, with pages under the components path for each component.
-- [ ] Button page follows the thin-page shape: import line, one live example, local differences, recipes, Storybook link, upstream links, no copied prop tables.
-- [ ] Docs app uses the built package stylesheet and theme and renders dark mode.
-- [ ] Docs-only changes build without a package release.
+- [x] Docs app is private and ignored by changesets, with pages under the components path for each component.
+- [x] Button page follows the thin-page shape: import line, one live example, local differences, recipes, Storybook link, upstream links, no copied prop tables.
+- [x] Docs app uses the built package stylesheet and theme and renders dark mode.
+- [x] Docs-only changes build without a package release.
+
+## Comments
+
+No changesets config exists yet (ticket 44); the docs package is `private`, so it never publishes. Add it to changesets `ignore` in that ticket. Docs build runs inside root `pnpm build` (workspace order builds eds-ui first), so CI covers it.

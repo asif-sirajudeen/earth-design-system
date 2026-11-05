@@ -7,12 +7,12 @@
 **Blocked by:** 
 - 12 — Docs app tracer: Fumadocs and Button page
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `medium`
 
-- [ ] `llms.txt`, `llms-full.txt` and per-page markdown are served with processed markdown.
-- [ ] The Fumadocs MCP route is off.
-- [ ] Button page markdown is reachable at its page path plus `.md`.
+- [x] `llms.txt`, `llms-full.txt` and per-page markdown are served with processed markdown.
+- [x] The Fumadocs MCP route is off.
+- [x] Button page markdown is reachable at its page path plus `.md`.

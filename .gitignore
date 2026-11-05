@@ -22,3 +22,6 @@ coverage/
 
 # planning scratch, not part of the shipped repo
 .wayfinder/
+
+# next
+next-env.d.ts

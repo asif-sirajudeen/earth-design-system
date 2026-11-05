@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "fumadocs-ui/css/neutral.css";
+@import "fumadocs-ui/css/preset.css";
+/* The same three lines a consuming app uses. */
+@import "@asif-sirajudeen/eds-ui/themes/default.css";
+@import "@asif-sirajudeen/eds-ui/styles.css";
