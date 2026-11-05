@@ -9,6 +9,21 @@ import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, Dialog
 
 <DialogExample />
 
+```tsx
+<Dialog>
+  <DialogTrigger render={<Button variant="outline" />}>Open dialog</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Edit profile</DialogTitle>
+      <DialogDescription>Make changes to your profile here.</DialogDescription>
+    </DialogHeader>
+    <DialogFooter>
+      <DialogClose render={<Button />}>Save</DialogClose>
+    </DialogFooter>
+  </DialogContent>
+</Dialog>
+```
+
 ## Local differences
 
 None. The component matches upstream shadcn base-nova.

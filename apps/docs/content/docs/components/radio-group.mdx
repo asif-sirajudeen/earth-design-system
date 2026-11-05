@@ -9,6 +9,25 @@ import { RadioGroup, RadioGroupItem } from "@asif-sirajudeen/eds-ui"
 
 <RadioGroupExample />
 
+```tsx
+<RadioGroup defaultValue="a" aria-label="Plan">
+  <Field orientation="horizontal">
+    <RadioGroupItem value="a" id="doc-plan-a" />
+    <FieldContent>
+      <FieldLabel htmlFor="doc-plan-a">Starter</FieldLabel>
+      <FieldDescription>For individuals.</FieldDescription>
+    </FieldContent>
+  </Field>
+  <Field orientation="horizontal">
+    <RadioGroupItem value="b" id="doc-plan-b" />
+    <FieldContent>
+      <FieldLabel htmlFor="doc-plan-b">Team</FieldLabel>
+      <FieldDescription>For groups.</FieldDescription>
+    </FieldContent>
+  </Field>
+</RadioGroup>
+```
+
 ## Local differences
 
 None. The component matches upstream shadcn base-nova.

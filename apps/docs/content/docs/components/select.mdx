@@ -9,6 +9,21 @@ import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@
 
 <SelectExample />
 
+```tsx
+<Select>
+  <SelectTrigger className="w-48" aria-label="Fruit">
+    <SelectValue placeholder="Pick a fruit" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectLabel>Fruits</SelectLabel>
+      <SelectItem value="apple">Apple</SelectItem>
+      <SelectItem value="banana">Banana</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
 ## Local differences
 
 None. The component matches upstream shadcn base-nova.

@@ -9,6 +9,14 @@ import { Field, FieldLabel, FieldDescription } from "@asif-sirajudeen/eds-ui"
 
 <FieldExample />
 
+```tsx
+<Field className="w-72">
+  <FieldLabel htmlFor="field-email">Email</FieldLabel>
+  <Input id="field-email" type="email" />
+  <FieldDescription>We never share your email.</FieldDescription>
+</Field>
+```
+
 ## Local differences
 
 None. The component matches upstream shadcn base-nova.
