@@ -74,3 +74,25 @@ describe("eds-ui CLI", () => {
     await expect(eds("add", "widget")).rejects.toMatchObject({ code: 1 })
   })
 })
+
+describe("registry manifest", () => {
+  const registry = JSON.parse(readFileSync(`${pkg}registry.json`, "utf8"))
+
+  it("names every exported part on description line 1", () => {
+    for (const item of registry.items.filter((i: { name: string }) => i.name !== "setup")) {
+      const src = readFileSync(`${pkg}src/components/ui/${item.name}.tsx`, "utf8")
+      const exported = [
+        ...[...src.matchAll(/^export (?:async )?(?:function|const) (\w+)/gm)].map((m) => m[1]),
+        ...[...src.matchAll(/^export \{([^}]*)\}/gms)].flatMap((m) => (m[1] ?? "").split(",").map((x) => x.trim()).filter(Boolean)),
+      ]
+      const line1 = item.description.split("\n")[0]
+      for (const name of exported) expect(line1, `${item.name}: ${name}`).toMatch(new RegExp(`\\b${name}\\b`))
+    }
+  })
+})
+
+it("pins the shadcn version that the devDependency installs", () => {
+  const pinned = readFileSync(`${pkg}bin/eds-ui.mjs`, "utf8").match(/SHADCN_VERSION = "([^"]+)"/)?.[1]
+  const dev = JSON.parse(readFileSync(`${pkg}package.json`, "utf8")).devDependencies.shadcn
+  expect(dev).toBe(`^${pinned}`)
+})
