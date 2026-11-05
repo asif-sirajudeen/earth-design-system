@@ -13,9 +13,9 @@
 
 **Effort:** `medium`
 
-- [ ] RadioGroup imports from the package root and renders styled in a consuming app using only the two prebuilt CSS files.
+- [ ] RadioGroup imports from the package root and renders styled in a consuming app with the three app setup lines (`tailwindcss`, theme, styles).
 - [ ] Story file has a Default story with Controls and one story per shadcn variant and size of RadioGroup.
 - [ ] Smoke test renders the stories, logs no console errors, and axe reports no violations.
 - [ ] Docs page has the import line, one live example, local differences, an Open in Storybook link, and links to upstream shadcn and the Base UI API reference.
-- [ ] Stylesheet coverage and prefix check passes on the fresh build.
+- [ ] Fixture compile, sentinel and `ui:` checks pass on the fresh build.
 - [ ] A recipe story and docs section show RadioGroup labelled with Field parts.

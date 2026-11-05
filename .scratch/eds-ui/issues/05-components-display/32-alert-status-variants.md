@@ -15,10 +15,10 @@
 
 **Effort:** `medium`
 
-- [ ] Alert imports from the package root and renders styled in a consuming app using only the two prebuilt CSS files.
+- [ ] Alert imports from the package root and renders styled in a consuming app with the three app setup lines (`tailwindcss`, theme, styles).
 - [ ] Story file has a Default story with Controls and one story per shadcn variant and size of Alert.
 - [ ] Smoke test renders the stories, logs no console errors, and axe reports no violations.
 - [ ] Docs page has the import line, one live example, local differences, an Open in Storybook link, and links to upstream shadcn and the Base UI API reference.
-- [ ] Stylesheet coverage and prefix check passes on the fresh build.
+- [ ] Fixture compile, sentinel and `ui:` checks pass on the fresh build.
 - [ ] `positive` and `caution` variants render their variant output, covered by a behaviour test.
 - [ ] These are the only local source edits besides the theme; all other source stays identical to upstream.
