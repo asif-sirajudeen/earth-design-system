@@ -53,6 +53,10 @@ for (const v of ["positive", "positive-foreground", "caution", "caution-foregrou
   if (theme.split(`--${v}:`).length !== 3) problems.push(`theme must define --${v} in light and dark`)
   if (!mapping.includes(`--color-${v}: var(--${v})`)) problems.push(`styles.css must map --color-${v}`)
 }
+for (const f of ["alert", "badge"]) {
+  const src = readFileSync(join(root, `src/components/ui/${f}.tsx`), "utf8")
+  for (const v of ["positive", "caution"]) if (!new RegExp(`^\\s+${v}:\\s`, "m").test(src)) problems.push(`${f}.tsx lost its local ${v} variant`)
+}
 if (!theme.includes("--radius-button: var(--radius)")) problems.push("--radius-button must default to var(--radius)")
 if (/--font-sans|--[\w-]*(hover|pressed)/.test(theme)) problems.push("theme must not set --font-sans or hover/pressed vars")
 for (const s of sentinels) if (!css.includes(s)) problems.push(`missing sentinel selector: ${s}`)

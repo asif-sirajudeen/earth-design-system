@@ -1,0 +1,36 @@
+---
+title: Badge
+description: A small label for status or a count.
+---
+
+```tsx
+import { Badge } from "@asif-sirajudeen/eds-ui"
+```
+
+<BadgeExample />
+
+```tsx
+<Badge>Default</Badge>
+<Badge variant="positive">Active</Badge>
+<Badge variant="caution">Pending</Badge>
+<Badge variant="destructive">Failed</Badge>
+```
+
+## Local differences
+
+Badge adds two variants, `positive` and `caution`. They use the `--positive` and `--caution` theme colors. All other source matches upstream shadcn base-nova.
+
+## Status mapping
+
+| EDS status | Badge variant |
+| --- | --- |
+| info | `default` |
+| critical | `destructive` |
+| positive | `positive` |
+| caution | `caution` |
+
+## Reference
+
+- <StorybookLink story="components-badge">Open in Storybook</StorybookLink>
+- [shadcn/ui Badge](https://ui.shadcn.com/docs/components/base/badge)
+- [Base UI useRender](https://base-ui.com/react/utils/use-render) (Badge accepts a `render` prop)

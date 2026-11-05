@@ -1,4 +1,7 @@
 import {
+  Alert,
+  AlertDescription,
+  AlertTitle,
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -8,6 +11,10 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
+  Avatar,
+  AvatarBadge,
+  AvatarFallback,
+  Badge,
   Button,
   Checkbox,
   Dialog,
@@ -49,7 +56,13 @@ import {
   Separator,
   Spinner,
   Switch,
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
   Textarea,
+  Toaster,
+  toast,
   Tooltip,
   TooltipContent,
   TooltipTrigger,
@@ -252,5 +265,65 @@ export const DropdownMenuExample = () => (
         <DropdownMenuItem variant="destructive">Log out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+  </Box>
+)
+
+export const TabsExample = () => (
+  <Box>
+    <Tabs defaultValue="account" className="w-80">
+      <TabsList>
+        <TabsTrigger value="account">Account</TabsTrigger>
+        <TabsTrigger value="password">Password</TabsTrigger>
+      </TabsList>
+      <TabsContent value="account">Manage your account.</TabsContent>
+      <TabsContent value="password">Change your password.</TabsContent>
+    </Tabs>
+  </Box>
+)
+
+export const AlertExample = () => (
+  <Box>
+    <Alert variant="positive" className="max-w-md">
+      <AlertTitle>Saved</AlertTitle>
+      <AlertDescription>Your changes are live.</AlertDescription>
+    </Alert>
+  </Box>
+)
+
+export const BadgeExample = () => (
+  <Box>
+    <Badge>Default</Badge>
+    <Badge variant="positive">Active</Badge>
+    <Badge variant="caution">Pending</Badge>
+    <Badge variant="destructive">Failed</Badge>
+  </Box>
+)
+
+export const AvatarExample = () => (
+  <Box>
+    <Avatar>
+      <AvatarFallback>AB</AvatarFallback>
+      <AvatarBadge className="bg-positive" />
+    </Avatar>
+    <Avatar className="size-16">
+      <AvatarFallback>CD</AvatarFallback>
+    </Avatar>
+  </Box>
+)
+
+export const SpinnerExample = () => (
+  <Box>
+    <Spinner />
+    <Spinner className="size-8" />
+  </Box>
+)
+
+export const ToastExample = () => (
+  <Box>
+    <Toaster>
+      <Button variant="outline" onClick={() => toast.add({ title: "Event created", description: "Monday, 9:00 AM" })}>
+        Show toast
+      </Button>
+    </Toaster>
   </Box>
 )

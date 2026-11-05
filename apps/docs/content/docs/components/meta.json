@@ -1,1 +1,1 @@
-{"title": "Components", "pages": ["button", "input", "textarea", "label", "separator", "field", "checkbox", "radio-group", "switch", "select", "dialog", "alert-dialog", "tooltip", "popover", "dropdown-menu"]}
+{"title": "Components", "pages": ["button", "input", "textarea", "label", "separator", "field", "checkbox", "radio-group", "switch", "select", "dialog", "alert-dialog", "tooltip", "popover", "dropdown-menu", "tabs", "alert", "badge", "avatar", "spinner", "toast"]}

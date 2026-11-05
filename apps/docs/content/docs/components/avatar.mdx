@@ -1,0 +1,39 @@
+---
+title: Avatar
+description: An image of a user, with a fallback.
+---
+
+```tsx
+import { Avatar, AvatarImage, AvatarFallback, AvatarBadge } from "@asif-sirajudeen/eds-ui"
+```
+
+<AvatarExample />
+
+```tsx
+<Avatar>
+  <AvatarFallback>AB</AvatarFallback>
+  <AvatarBadge className="bg-positive" />
+</Avatar>
+```
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## Recipes
+
+Avatar has no `status` prop and only `sm`, `default` and `lg` sizes. Both gaps are recipes, with no change to Avatar source.
+
+### Status
+
+Add an `AvatarBadge` with a color class: `bg-positive` for online, `bg-caution` for away.
+
+### Extra sizes
+
+Set the size by `className`, for example `className="size-16"`. `AvatarBadge` keeps the `default` size.
+
+## Reference
+
+- <StorybookLink story="components-avatar">Open in Storybook</StorybookLink>
+- [shadcn/ui Avatar](https://ui.shadcn.com/docs/components/base/avatar)
+- [Base UI Avatar](https://base-ui.com/react/components/avatar)

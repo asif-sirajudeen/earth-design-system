@@ -1,0 +1,37 @@
+---
+title: Alert
+description: Callout for a message the user should notice.
+---
+
+```tsx
+import { Alert, AlertTitle, AlertDescription } from "@asif-sirajudeen/eds-ui"
+```
+
+<AlertExample />
+
+```tsx
+<Alert variant="positive">
+  <AlertTitle>Saved</AlertTitle>
+  <AlertDescription>Your changes are live.</AlertDescription>
+</Alert>
+```
+
+## Local differences
+
+Alert adds two variants, `positive` and `caution`. They use the `--positive` and `--caution` theme colors. All other source matches upstream shadcn base-nova.
+
+## Status mapping
+
+| EDS status | Alert variant |
+| --- | --- |
+| info | `default` |
+| critical | `destructive` |
+| positive | `positive` |
+| caution | `caution` |
+
+## Reference
+
+- <StorybookLink story="components-alert">Open in Storybook</StorybookLink>
+- [shadcn/ui Alert](https://ui.shadcn.com/docs/components/base/alert)
+
+Alert is a plain `div` with `role="alert"`, with no Base UI part to link.

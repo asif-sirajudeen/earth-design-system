@@ -1,0 +1,31 @@
+---
+title: Tabs
+description: Switches between panels of related content.
+---
+
+```tsx
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@asif-sirajudeen/eds-ui"
+```
+
+<TabsExample />
+
+```tsx
+<Tabs defaultValue="account">
+  <TabsList>
+    <TabsTrigger value="account">Account</TabsTrigger>
+    <TabsTrigger value="password">Password</TabsTrigger>
+  </TabsList>
+  <TabsContent value="account">Manage your account.</TabsContent>
+  <TabsContent value="password">Change your password.</TabsContent>
+</Tabs>
+```
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## Reference
+
+- <StorybookLink story="components-tabs">Open in Storybook</StorybookLink>
+- [shadcn/ui Tabs](https://ui.shadcn.com/docs/components/base/tabs)
+- [Base UI Tabs](https://base-ui.com/react/components/tabs)

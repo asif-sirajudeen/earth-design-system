@@ -3,6 +3,9 @@ import type { MDXComponents } from "mdx/types"
 import { ButtonExample } from "@/components/button-example"
 import {
   AlertDialogExample,
+  AlertExample,
+  AvatarExample,
+  BadgeExample,
   ButtonIconOnlyExample,
   ButtonLoadingExample,
   CheckboxExample,
@@ -15,8 +18,11 @@ import {
   RadioGroupExample,
   SelectExample,
   SeparatorExample,
+  SpinnerExample,
   SwitchExample,
+  TabsExample,
   TextareaExample,
+  ToastExample,
   TooltipExample,
 } from "@/components/examples"
 import { StorybookLink } from "@/components/storybook-link"
@@ -41,6 +47,12 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     DialogExample,
     DropdownMenuExample,
     PopoverExample,
+    TabsExample,
+    AlertExample,
+    BadgeExample,
+    AvatarExample,
+    SpinnerExample,
+    ToastExample,
     TooltipExample,
     ...components,
   }

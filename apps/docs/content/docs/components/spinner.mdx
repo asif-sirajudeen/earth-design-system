@@ -1,0 +1,28 @@
+---
+title: Spinner
+description: An animated loading indicator.
+---
+
+```tsx
+import { Spinner } from "@asif-sirajudeen/eds-ui"
+```
+
+<SpinnerExample />
+
+```tsx
+<Spinner />
+<Spinner className="size-8" />
+```
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+Spinner has no size prop. Set the size by `className`. It renders `role="status"` with `aria-label="Loading"`. Use it inside a disabled Button for a loading state: see [Button](/docs/components/button).
+
+## Reference
+
+- <StorybookLink story="components-spinner">Open in Storybook</StorybookLink>
+- [shadcn/ui Spinner](https://ui.shadcn.com/docs/components/base/spinner)
+
+Spinner is a styled Lucide icon, with no Base UI part to link.

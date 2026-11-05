@@ -1,0 +1,46 @@
+---
+title: Toast
+description: A brief message that appears and dismisses itself.
+---
+
+```tsx
+import { Toaster, toast } from "@asif-sirajudeen/eds-ui"
+```
+
+<ToastExample />
+
+```tsx
+// once, at the app root
+<Toaster />
+
+// anywhere
+toast.add({ title: "Event created", description: "Monday, 9:00 AM" })
+```
+
+## Local differences
+
+None. The component matches upstream shadcn base-nova.
+
+## Setup
+
+Mount one `<Toaster />` at the app root, then call `toast.add()` from anywhere. `toast` is a module-level manager, so no hook or provider is needed at the call site.
+
+## Types
+
+`type` is a free string that Toast uses for the icon: `success`, `info`, `warning`, `error` and `loading`. The EDS loading status maps to `type: "loading"`. Give it `timeout: 0` to keep it until dismissed.
+
+## Placement and duration
+
+- Duration: `timeout` is in milliseconds and defaults to `5000`. `0` never dismisses. Set it on `<Toaster timeout={...}>` for all toasts or on `toast.add()` for one.
+- Count: `limit` on `<Toaster>` is the most toasts shown at once. It defaults to `3`.
+- Placement: there is no placement prop. `ToastViewport` positions the stack with classes (bottom right on `sm` and up). Change it with `className` when you compose the parts yourself.
+
+## Duplicate package copies
+
+`toast` is created when the package loads. Two copies of `@asif-sirajudeen/eds-ui` in one bundle have two separate toast managers. A `toast.add()` from one copy does not reach a `<Toaster />` from the other. Dedupe the package.
+
+## Reference
+
+- <StorybookLink story="components-toast">Open in Storybook</StorybookLink>
+- [shadcn/ui Toast](https://ui.shadcn.com/docs/components/base/toast)
+- [Base UI Toast](https://base-ui.com/react/components/toast)

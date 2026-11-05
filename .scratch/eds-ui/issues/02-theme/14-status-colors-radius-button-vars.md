@@ -7,7 +7,7 @@
 **Blocked by:** 
 - 07 — Package tracer: Button builds and imports from the tarball
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
