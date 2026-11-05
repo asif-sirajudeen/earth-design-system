@@ -7,12 +7,16 @@
 **Blocked by:** 
 - 41 — registry:snapshot script
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `medium`
 
-- [ ] One changesets config at the workspace root; docs app ignored.
-- [ ] The `version` script runs changeset version, then the registry snapshot.
-- [ ] Versions start at 0.1.0; a bump produces the new snapshot folder.
+- [x] One changesets config at the workspace root; docs app ignored.
+- [x] The `version` script runs changeset version, then the registry snapshot.
+- [x] Versions start at 0.1.0; a bump produces the new snapshot folder.
+
+## Comments
+
+Root `version` script is `changeset version && pnpm registry:snapshot`. Package starts at 0.1.0; `r/src/0.0.0` replaced by `r/src/0.1.0`. Verified with a throwaway changeset.
