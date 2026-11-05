@@ -35,3 +35,12 @@
     --color-input: var(--input);
     --color-ring: var(--ring);
 }
+
+/* Stock button sizes use rounded-[min(var(--radius-md),Npx)]. prefix(ui) renames
+   Tailwind's --radius-md to --ui-radius-md, so define the bare name here. Layered,
+   so an app's own Tailwind --radius-md (loaded later) wins over this one. */
+@layer theme {
+    :root, :host {
+        --radius-md: calc(var(--radius) * 0.8);
+    }
+}

@@ -57,11 +57,12 @@ One rule escapes layers and the prefix: `shadcn/tailwind.css` emits an
 unlayered `@media (prefers-reduced-motion: reduce) { .shimmer {...} }`. It is
 stock and left as is.
 
-## Known prefix defect: `--radius-md` (Tailwind 4.3.4)
+## `--radius-md` under the prefix
 
 Stock `button.tsx` sizes `xs`, `sm`, `icon-xs` and `icon-sm` use
-`rounded-[min(var(--radius-md),Npx)]`. Without a prefix, Tailwind emits
-`--radius-md` because the arbitrary value references it. With `prefix(ui)` it
-would be `--ui-radius-md`, and the reference inside the arbitrary value is not
-rewritten, so `--radius-md` is undefined and those corners render square.
-Not fixed yet.
+`rounded-[min(var(--radius-md),Npx)]`. With `prefix(ui)`, Tailwind's variable is
+`--ui-radius-md`, and the reference inside the arbitrary value is not
+rewritten. `styles.css` therefore defines a bare
+`--radius-md: calc(var(--radius) * 0.8)` in `@layer theme`. It is layered on
+purpose: an app's own Tailwind `--radius-md`, loaded after the package CSS,
+wins, and the package never restyles the app's `rounded-md`.
