@@ -7,16 +7,16 @@
 **Blocked by:** 
 - 01 — Repo init: git, public GitHub repo, pnpm workspace
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `sonnet`
 
 **Effort:** `low`
 
-- [ ] Name is `@asif-sirajudeen/eds-ui`, MIT, public publish access, ESM only.
-- [ ] Exports are exactly the root, `styles.css` and `themes/default.css`; an `eds-ui` bin entry is reserved.
-- [ ] Peers are React and React DOM ^19.0.0 and `tailwindcss` ^4.3.0; dependencies are Base UI, class-variance-authority, cn, lucide-react, tw-animate-css.
-- [ ] Dev dependencies hold Tailwind, `@tailwindcss/cli` (CI fixture compile), tsdown, shadcn and test and lint tooling. The description does not say "prebuilt CSS".
-- [ ] Versions are re-checked against the spec's version list.
+- [x] Name is `@asif-sirajudeen/eds-ui`, MIT, public publish access, ESM only.
+- [x] Exports are exactly the root, `styles.css` and `themes/default.css`; an `eds-ui` bin entry is reserved.
+- [x] Peers are React and React DOM ^19.0.0 and `tailwindcss` ^4.3.0; dependencies are Base UI, class-variance-authority, cn, lucide-react, tw-animate-css.
+- [x] Dev dependencies hold Tailwind, `@tailwindcss/cli` (CI fixture compile), tsdown, shadcn and test and lint tooling. The description does not say "prebuilt CSS".
+- [x] Versions are re-checked against the spec's version list.
 
 **Reworked per wayfinder ticket 21** (`.wayfinder/tickets/21-css-distribution-reopen.md`, 2026-11-05): no prefix, no prebuilt utility CSS; the app's Tailwind compiles the package classes through `@source`.

@@ -6,7 +6,7 @@
 
 **Blocked by:** None — can start immediately
 
-**Status:** ready-for-agent
+**Status:** done
 
 **Model:** `haiku`
 
@@ -14,7 +14,7 @@
 
 **Human step:** Create and push the public GitHub repo (outward-facing)
 
-- [ ] Git repo initialised and pushed to a public GitHub repo on the personal account.
-- [ ] pnpm workspace has the package workspace and the docs workspace; scripts use recursive pnpm commands.
-- [ ] Root has tsconfig base, ignore file and a pinned Node LTS version.
-- [ ] Existing `.wayfinder` planning files are kept out of the shipped package.
+- [x] Git repo initialised and pushed to a public GitHub repo on the personal account.
+- [x] pnpm workspace has the package workspace and the docs workspace; scripts use recursive pnpm commands.
+- [x] Root has tsconfig base, ignore file and a pinned Node LTS version.
+- [x] Existing `.wayfinder` planning files are kept out of the shipped package.
