@@ -19,6 +19,8 @@ jobs:
           node-version: 24
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      # docs resolves the package types from dist
+      - run: pnpm --filter @asif-sirajudeen/eds-ui build
       - run: pnpm typecheck
       - run: pnpm lint
       - run: pnpm build
