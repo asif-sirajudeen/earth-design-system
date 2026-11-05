@@ -1,7 +1,5 @@
 # @asif-sirajudeen/eds-ui
 
-Earth Design System: shadcn base-nova components on Base UI, compiled by your Tailwind v4.
-
 ```bash
 npm install @asif-sirajudeen/eds-ui
 ```
